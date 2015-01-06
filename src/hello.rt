@@ -4,10 +4,18 @@
 
     <h2>ShaiK is over-reacting at ({this.state.location.lat},{this.state.location.lon})</h2>
 
-    <div key="panel">
-        <form>
-            <input type="text" value="guy" onChange="(evt) => console.log(evt.target.value)"> <br/>
-            <input type="number" value="15" onChange="(evt) => console.log(evt.target.value)"> <br/>
-        </form>
-    </div>
+    <form>
+        Select a country:
+        <select autofocus="true" valueLink="{this.deepLinkState('country')}">
+            <option rt-repeat="country in this.geoData.countries" value="{country}" >{country}</option>
+        </select>
+        <br/>
+        Select a city:
+        <select valueLink="{this.deepLinkState('city')}">
+            <option rt-repeat="city in this.geoData[this.state.country]" value="{city}">{city}</option>
+        </select>
+        <br/>
+        <button rt-props="!this.state.ready ? {'disabled':true} : {}">Submit</button>
+    </form>
+
 </div>
