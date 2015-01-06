@@ -1,4 +1,5 @@
 define(['lodash'], function(_){
+   'use strict';
     function getPropertyParent(stateObj, pathArray){
         var propertyParent;
         if (pathArray.length === 0){
@@ -19,9 +20,8 @@ define(['lodash'], function(_){
         return getInPath(obj[path[0]], path.slice(1));
     }
 
-    return {
-        deepLinkState: function(statePath){
-
+    var  LinkedDeepStateMixin = {
+        linkDeepState: function(statePath){
 
             return {
                 value: getInPath(this.state, statePath.split('.')),
@@ -37,5 +37,9 @@ define(['lodash'], function(_){
                 }.bind(this)
             }
         }
+    };
+
+    return {
+        LinkedDeepStateMixin: LinkedDeepStateMixin
     }
-})
+});
