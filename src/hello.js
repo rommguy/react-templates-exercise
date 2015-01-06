@@ -1,10 +1,12 @@
-define(['react', 'lodash', './hello.rt', 'utils'], function (React, _, template, /** utils */utils) {
+define(['react', 'lodash', './hello.rt', 'deepLinkingMixin'], function (React, _, template, deepLinkMixin) {
     'use strict';
 
 
     return React.createClass({
         displayName: 'Hello',
+        mixins: [deepLinkMixin],
         getInitialState: function(){
+            this.inChange = false;
             return {
                 location : {
                     lat: 0,
@@ -12,30 +14,14 @@ define(['react', 'lodash', './hello.rt', 'utils'], function (React, _, template,
                 }
             }
         },
-        handleLatChange: function(lat){
-            this.setState({
-                location : {
-                    lat: lat,
-                    long: this.state.location.long
-                }
-            })
-        },
-        handleLongChange: function(long){
-            this.setState({
-                location : {
-                    lat: this.state.location.lat,
-                    long: long
-                }
-            })
-        },
         render: function(){
             this.latValueLink = {
                 value: this.state.location.lat,
-                requestChange: this.handleLatChange
+                onChange: this.handleLatChange
             }
             this.longValueLink = {
                 value: this.state.location.long,
-                requestChange: this.handleLongChange
+                onChange: this.handleLongChange
             }
             return template.apply(this);
         }
