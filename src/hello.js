@@ -23,6 +23,19 @@ define(['react', 'lodash', './hello.rt', 'deepLinkingMixin'], function (React, _
                 ready: false
             }
         },
+        componentDidUpdate: function(){
+            if (this.state.country && this.state.city && !this.state.ready){
+                this.setState({
+                    ready: true
+                })
+                return;
+            }
+            if (!(this.state.country && this.state.city) && this.state.ready){
+                this.setState({
+                    ready:false
+                })
+            }
+        },
         render: function(){
             return template.apply(this);
         }
