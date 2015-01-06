@@ -1,5 +1,5 @@
 <div>
-    Latitude: <input type="number" valueLink="{this.linkDeepState('location.lat')}"/><br/>
-    Longitude: <input type="number" valueLink="{this.linkDeepState('location.lon')}"/><br/>
+    Latitude: <input type="number" valueLink="{this.deepLinkState('location.lat')}"/><br/>
+    Longitude: <input type="number" valueLink="{this.deepLinkState('location.lon')}"/><br/>
     <h2>ShaiK is over-reacting at ({this.state.location.lat},{this.state.location.lon})</h2>
 </div>

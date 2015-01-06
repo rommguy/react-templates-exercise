@@ -1,6 +1,6 @@
 define(['lodash'], function(_){
    'use strict';
-    function getPropertyParent(stateObj, pathArray){
+    function getObjectProperty(stateObj, pathArray){
         var propertyParent;
         if (pathArray.length === 0){
             propertyParent = stateObj;
@@ -21,7 +21,7 @@ define(['lodash'], function(_){
     }
 
     return {
-        linkDeepState: function(statePath){
+        deepLinkState: function(statePath){
 
             return {
                 value: getInPath(this.state, statePath.split('.')),
@@ -31,7 +31,7 @@ define(['lodash'], function(_){
                     pathArray = pathArray.slice(0, pathArray.length - 1);
                     var newState = _.cloneDeep(this.state);
 
-                    var clonedPropertyParent = getPropertyParent(newState, pathArray);
+                    var clonedPropertyParent = getObjectProperty(newState, pathArray);
                     clonedPropertyParent[propertyName] = value;
                     this.setState(newState);
                 }.bind(this)
