@@ -4,7 +4,7 @@ define(['react', 'lodash', './hello.rt', 'deepLinkingMixin'], function (React, _
 
     return React.createClass({
         displayName: 'Hello',
-        mixins: [mixins.LinkedDeepStateMixin],
+        mixins: [mixins],
         getInitialState: function(){
             return {
                 location : {
@@ -13,6 +13,8 @@ define(['react', 'lodash', './hello.rt', 'deepLinkingMixin'], function (React, _
                 }
             }
         },
-        render: template
+        render: function(){
+            return template.apply(this);
+        }
     });
 });

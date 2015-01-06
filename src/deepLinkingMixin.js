@@ -20,7 +20,7 @@ define(['lodash'], function(_){
         return getInPath(obj[path[0]], path.slice(1));
     }
 
-    var  LinkedDeepStateMixin = {
+    return {
         linkDeepState: function(statePath){
 
             return {
@@ -39,7 +39,4 @@ define(['lodash'], function(_){
         }
     };
 
-    return {
-        LinkedDeepStateMixin: LinkedDeepStateMixin
-    }
 });
