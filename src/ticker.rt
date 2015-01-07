@@ -1,0 +1,5 @@
+<div rt-class="{'edico-ticker-default': true, disabled: this.isDisabled()}">
+    <label class="label" rt-if="this.hasLabel()">{this.getLabel()}</label>
+    <input class="input" type="number" value="{this.state.value}" onChange="{this.handleChange}"/>
+    <span class="units"></span>
+</div>

@@ -11,3 +11,94 @@ select {
     bottom: 5px;
     right: 5px;
 }
+
+
+.edico-slider-default [state~="hasLabel"] {
+    display: block;
+}
+
+.edico-slider-default .sliderArea {
+    position: relative;
+}
+
+.edico-slider-default .input {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.edico-slider-default .sliderContainer {
+    position: relative;
+    height: 26px;
+    margin: 0 6em 0 4px;
+    background: url(slider_sprite.png) repeat-x 0 -26px;
+}
+
+.edico-slider-default .sliderContainer .leftCorner {
+    position: absolute;
+    height: 26px;
+    width: 4px;
+    top: 0;
+    left: -4px;
+    background: url(slider_sprite.png) no-repeat 100% -52px;
+}
+
+.edico-slider-default .sliderContainer .rightCorner {
+    position: absolute;
+    height: 26px;
+    width: 4px;
+    top: 0;
+    right: -4px;
+    background: url(slider_sprite.png) no-repeat 0 -78px;
+}
+
+.edico-slider-default .sliderContainer .sliderKnob {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    top: 0;
+    left: 50%;
+    margin-left: -13px;
+    background: url(slider_sprite.png) no-repeat 50% 0;
+    cursor: pointer;
+}
+
+.edico-slider-default.disabled {
+    opacity: 0.5;
+}
+
+.edico-ticker-default .label {
+    display: block;
+}
+
+.edico-ticker-default .input:hover {
+    border-color: #a3d9f6;
+}
+
+.edico-ticker-default .input:focus {
+    border-color: #19a0e9;
+}
+
+.edico-ticker-default .units {
+    font-size: .916em;
+    margin-left: 3px;
+}
+
+.edico-ticker-default input.input {
+    width: 5em;
+    margin: 0 0 5px 0;
+    padding: 0 3px;
+    line-height: 1.1em;
+    height: 1.8em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px 0 0 0 0 .1 inset;
+    font-size: .916em;
+}
+
+.edico-ticker-default.disabled .label {
+    opacity: 0.5;
+}

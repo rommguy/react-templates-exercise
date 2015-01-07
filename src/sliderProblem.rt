@@ -1,0 +1,8 @@
+<rt-require dependency="slider" as="slider"/>
+<div style="width:250px;">
+    <slider min="{0}" max="{500}" /><br/>
+    <div style="border:1px solid blue;height:300px">
+        <div style="border:1px solid red;height:100px;top:50px;position:relative">
+        </div>
+    </div>
+</div>

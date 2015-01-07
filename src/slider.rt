@@ -1,0 +1,12 @@
+<rt-require dependency="ticker" as="ticker"/>
+<div rt-class="{'edico-slider-default': true, disabled:this.isDisabled()}" rt-props="this.getTopLevelProps()">
+    <label class="label">{this.getLabel()}</label>
+    <div class="clearfix sliderArea">
+        <div class="sliderContainer" ref="sliderContainer" onMouseDown="{this.mouseDown}">
+            <div class="leftCorner"></div>
+            <div class="rightCorner"></div>
+            <div class="sliderKnob" style="left:{this.percent}%"></div>
+        </div>
+        <ticker min="{this.props.min}" max="{this.props.max}" value="{this.state.value}" onChange="{this.handleTickerChange}"/>
+    </div>
+</div>
