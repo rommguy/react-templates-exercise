@@ -7,11 +7,13 @@
     <form>
         Select a country:
         <select autofocus="true" valueLink="{this.deepLinkState('country')}">
+            <option selected="{true}" disabled="{true}"></option>
             <option rt-repeat="country in this.geoData.countries" value="{country}" >{country}</option>
         </select>
         <br/>
         Select a city:
         <select valueLink="{this.deepLinkState('city')}">
+            <option selected="{true}" disabled="{true}"></option>
             <option rt-repeat="city in this.geoData[this.state.country]" value="{city}">{city}</option>
         </select>
         <br/>

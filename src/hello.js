@@ -36,8 +36,6 @@ define(['react', 'lodash', './hello.rt', 'deepLinkingMixin'], function (React, _
                 })
             }
         },
-        render: function(){
-            return template.apply(this);
-        }
+        render: template
     });
 });
