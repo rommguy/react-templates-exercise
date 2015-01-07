@@ -1,28 +1,5 @@
 ## Overview
 
-Starter project for [react-templates](https://github.com/wix/react-templates)
+Solution for exercises with [React-Templates](https://github.com/wix/react-templates)
 
-## Quick start
-
-### Setup
-* Have [NodeJS](http://nodejs.org/) installed.
-* Run these lines:
-
-```bash
-npm install -g grunt-cli
-git clone git@github.com:wix/hello-react-templates.git
-cd hello-react-templates
-npm install
-grunt
-```
-
-* if you need a web server
- 
-```bash
-npm install -g serve
-serve
-```
-
-### Run
-Open http://localhost:3000/src/index.html in browser
-Explore
+Exercises can be found [here](https://docs.google.com/a/wix.com/document/d/13MGXe7A02OfHEqJTnOpT2XfOVjqj8XvtOWQcQVRjydA/edit#)
