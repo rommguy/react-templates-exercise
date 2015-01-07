@@ -15,7 +15,7 @@ requirejs.config({
     }
 });
 
-requirejs(['react', './hello'], function (React, hello) {
+requirejs(['react', './panelContainer'], function (React, hello) {
     'use strict';
     React.render(React.createElement(hello), document.getElementById('container'));
 });

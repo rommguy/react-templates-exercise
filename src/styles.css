@@ -5,3 +5,9 @@ input {
 select {
     margin: 5px;
 }
+
+.panel-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}

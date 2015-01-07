@@ -1,0 +1,4 @@
+<rt-require dependency="panelWithButton" as="MyPanel"/>
+<div>
+    <MyPanel panelStyle="{this.panelStyle}"></MyPanel>
+</div>
