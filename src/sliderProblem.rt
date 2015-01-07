@@ -1,8 +1,13 @@
 <rt-require dependency="slider" as="slider"/>
 <div style="width:250px;">
-    <slider min="{0}" max="{500}" /><br/>
-    <div style="border:1px solid blue;height:300px">
-        <div style="border:1px solid red;height:100px;top:50px;position:relative">
+    <slider min="{this.state.innerBoxPosition + this.state.innerBoxHeight}" max="{500}" valueLink="{this.deepLinkState('panelHeight')}"
+            label="Panel height"/><br/>
+    <slider min="{0}" max="{this.state.panelHeight - this.state.innerBoxHeight}" valueLink="{this.deepLinkState('innerBoxPosition')}"
+            label="Inner box position"/><br/>
+    <slider min="{0}" max="{this.state.panelHeight - this.state.innerBoxPosition}" valueLink="{this.deepLinkState('innerBoxHeight')}"
+            label="Inner box height"/><br/>
+    <div style="border:1px solid blue;height:{this.state.panelHeight}px;">
+        <div style="border:1px solid red;height:{this.state.innerBoxHeight}px;top:{this.state.innerBoxPosition}px;position:relative">
         </div>
     </div>
 </div>
