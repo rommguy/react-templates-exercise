@@ -1,8 +1,9 @@
-define(['react', 'lodash', 'panelContainer.rt'], function(React, _, template){
+define(['react', 'lodash', 'mixins', 'panelContainer.rt'], function(React, _, mixins, template){
     'use strict';
 
     return React.createClass({
         displayName: 'panelContainer',
+        mixins: [mixins.translationMixin],
         getInitialState: function(){
             this.panelStyle = {
                 width :'100px',
