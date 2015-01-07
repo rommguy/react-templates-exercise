@@ -17,7 +17,7 @@ define(['lodash', 'utils'], function (_, /** utils */ utils) {
         }
     }
 
-    var lang = utils.getUrlParam('lang');
+    var lang = utils.getUrlParam('lang') || 'en';
 
     var translationMixin = {
         translate: function(key){

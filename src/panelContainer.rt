@@ -1,6 +1,6 @@
 <rt-require dependency="panelWithButton" as="MyPanel"/>
 <div>
-    <h2>Panel Title</h2>
-    <p>This is a panel description, without translation</p>
+    <h2>{this.translate('PANEL_TITLE')}</h2>
+    <p style="font-size: 18px;">{this.translate('PANEL_DESCRIPTION')}</p>
     <MyPanel panelStyle="{this.panelStyle}"></MyPanel>
 </div>
