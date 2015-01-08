@@ -1,0 +1,12 @@
+<div>
+    <input type="text" valueLink="{this.getUserInputHandler()}"/>
+
+    <div class="options-wrapper">
+        <div class="select-option" rt-repeat="option in this.filteredOptions" onClick="() => this.optionSelected(option)">{option}</div>
+    </div>
+    <div class="selected-option" rt-repeat="label in this.state.selectedTags" style="margin:5px;">
+        <div style="display:inline-block;">{label}</div>
+        <div onClick="() => this.unselectOption(label)" style="display:inline-block; margin-left:5px;">x</div>
+    </div>
+
+</div>

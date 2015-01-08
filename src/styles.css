@@ -2,34 +2,29 @@ input {
     margin:5px;
 }
 
-select {
-    margin: 5px;
+.selected-option {
+    background-color: #E1ECF2;
+    display: inline-block;
+}
+
+.options-wrapper {
+    box-shadow: 0 0 12px black;
+    width:100px;
+}
+
+.select-option {
+    border:1px solid blue;
+    text-align: center;
+}
+
+.select-option:hover {
+    background-color:gray;
 }
 
 .panel-button {
     position: absolute;
     bottom: 5px;
     right: 5px;
-}
-
-.panel-container {
-    width: 300px;
-    position: absolute;
-    top:150px;
-    left: 200px;
-    box-shadow: 0 0 12px black;
-}
-
-.panel-header {
-    background-color: gray;
-}
-
-.panel-content {
-    height:200px;
-}
-
-.panel-footer {
-    background-color: gray;
 }
 
 

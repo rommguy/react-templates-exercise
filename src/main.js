@@ -16,7 +16,7 @@ requirejs.config({
     }
 });
 
-requirejs(['react', './templateWrapper'], function (React, templateWrapper) {
+requirejs(['react', './autocompleteTag'], function (React, autocompleteTag) {
     'use strict';
-    React.render(React.createElement(templateWrapper), document.getElementById('container'));
+    React.render(React.createElement(autocompleteTag), document.getElementById('container'));
 });
