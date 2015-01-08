@@ -16,7 +16,7 @@ requirejs.config({
     }
 });
 
-requirejs(['react', './sliderProblem'], function (React, sliderProblem) {
+requirejs(['react', './templateWrapper'], function (React, templateWrapper) {
     'use strict';
-    React.render(React.createElement(sliderProblem), document.getElementById('container'));
+    React.render(React.createElement(templateWrapper), document.getElementById('container'));
 });

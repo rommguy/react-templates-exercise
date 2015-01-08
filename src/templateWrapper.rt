@@ -1,0 +1,7 @@
+<div class="panel-container">
+    <div class="panel-header">
+        <div class="panel-title">My Panel</div>
+    </div>
+    <div class="panel-content"></div>
+    <div class="panel-footer">Panel Footer </div>
+</div>

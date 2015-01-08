@@ -12,6 +12,26 @@ select {
     right: 5px;
 }
 
+.panel-container {
+    width: 300px;
+    position: absolute;
+    top:150px;
+    left: 200px;
+    box-shadow: 0 0 12px black;
+}
+
+.panel-header {
+    background-color: gray;
+}
+
+.panel-content {
+    height:200px;
+}
+
+.panel-footer {
+    background-color: gray;
+}
+
 
 .edico-slider-default [state~="hasLabel"] {
     display: block;
