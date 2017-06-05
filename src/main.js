@@ -16,7 +16,7 @@ requirejs.config({
     }
 });
 
-requirejs(['react', './autocompleteTag'], function (React, autocompleteTag) {
+requirejs(['react', './sliderProblem'], function (React, sliderProblem) {
     'use strict';
-    React.render(React.createElement(autocompleteTag), document.getElementById('container'));
+    React.render(React.createElement(sliderProblem), document.getElementById('container'));
 });
